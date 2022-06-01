@@ -1,28 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class Enemy : Character
-{
-    Character character;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        character = GetComponent<Character>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    virtual public void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
-        {
-            collision.GetComponent<Player>().SetLife(character.GetComponent<Enemy>().GetDamage());
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:49cb46c65eb21a1af091556f3a60c2366a4cd5eb97274b0e56b9ce7582a05a7f
+size 588

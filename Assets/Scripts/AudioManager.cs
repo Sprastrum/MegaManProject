@@ -1,20 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.Audio;
-
-public class AudioManager : MonoBehaviour
-{
-    [SerializeField] private AudioClip[] audios;
-    private AudioSource controlAudio;
-
-    private void Awake()
-    {
-        controlAudio = GetComponent<AudioSource>();
-    }
-
-    public void PlayAudio(int audioNumber, float volumen)
-    {
-        controlAudio.PlayOneShot(audios[audioNumber], volumen);
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d5711c890fe9eb178c56ddcc701a6199a3bad1a3204192eb49fe8a3f2b37d718
+size 463
