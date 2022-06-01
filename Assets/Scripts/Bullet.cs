@@ -7,6 +7,7 @@ public class Bullet : MonoBehaviour
     private Rigidbody2D rb;
     private Collider2D collider;
     [SerializeField] float speed;
+    [SerializeField] int damage;
 
     // Start is called before the first frame update
     void Start()
@@ -18,12 +19,31 @@ public class Bullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rb.velocity = new Vector2(+speed, 0);
-        Destroy(gameObject, 5f);
+        Direction();
     }
 
-    public void SetDirection(float direction)
+    private void Direction()
     {
-        speed *= direction;
+        if(this.transform.localScale.x == -1)
+        {
+            rb.velocity = new Vector2(+speed, 0);
+        }
+        else
+        {
+            rb.velocity = new Vector2(-speed, 0);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            collision.GetComponent<Player>().SetLife(damage);
+            Destroy(gameObject);
+        }
+        else if (collision.CompareTag("Ground"))
+        {
+            Destroy(gameObject);
+        }
     }
 }

@@ -6,12 +6,13 @@ public class StaticEnemy : MonoBehaviour
 {
     [SerializeField] int life;
     [SerializeField] int damage;
-    public GameObject Bullet;
-    public Transform CanonEnemy;
+    [SerializeField] GameObject bullet;
+    [SerializeField] Transform canonEnemy;
     private RaycastHit2D attention;
     private bool isAttention;
-    private float coolDownFire = 0f;
+    [SerializeField] float coolDownFire = 2f;
     private Animator animation;
+    private float tiempo;
 
     // Start is called before the first frame update
     void Start()
@@ -23,8 +24,8 @@ public class StaticEnemy : MonoBehaviour
     void Update()
     {
         ChasePlayer();
-        Fire();
-        IsDeath(); 
+        IsFire();
+        IsDeath();
     }
 
     private void ChasePlayer()
@@ -40,19 +41,24 @@ public class StaticEnemy : MonoBehaviour
             Debug.DrawRay(transform.position, Vector2.left * 11f, Color.red);
         }
         isAttention = attention.collider != null;
-        Debug.Log(isAttention);
     }
 
-    private void Fire()
+    private void IsFire()
     {
-        if (isAttention && coolDownFire == 0f)
+        tiempo += Time.deltaTime;
+
+        if (tiempo >= coolDownFire && isAttention)
         {
-            coolDownFire = 4f;
-            Instantiate(Bullet, transform.position, Quaternion.identity);
-        }
-        else
-        {
-            coolDownFire -= Time.deltaTime;
+            if(transform.localScale.x == -1f)
+            {
+                Instantiate(bullet, canonEnemy.position, Quaternion.identity);
+            }
+            else
+            {
+                Instantiate(bullet, canonEnemy.position, Quaternion.identity);
+                canonEnemy.localScale.Set(-1, 1, 1);
+            }
+            tiempo = 0;
         }
     }
 
