@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4056308955404003820}
   - component: {fileID: 1216530632846767605}
   - component: {fileID: 3075936782420715652}
-  - component: {fileID: -2814189013429523937}
+  - component: {fileID: 7240050952797283987}
   m_Layer: 0
   m_Name: Explosive Bullet
   m_TagString: Untagged
@@ -106,7 +106,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-2814189013429523937
+--- !u!114 &7240050952797283987
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -118,3 +118,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 543f1af3d3056b94a96226fafc67d039, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeLife: 0.4

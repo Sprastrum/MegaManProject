@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 7888176368731931382}
   - component: {fileID: 7888176368731931381}
   - component: {fileID: 7888176368731931380}
-  - component: {fileID: 6662279277373305923}
-  - component: {fileID: 7888176368731931387}
   - component: {fileID: 1686110692271357088}
+  - component: {fileID: 7263232881412351599}
+  - component: {fileID: -6196592210693600072}
+  - component: {fileID: 7357321631729949944}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -108,8 +109,23 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!61 &6662279277373305923
-BoxCollider2D:
+--- !u!114 &1686110692271357088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7888176368731931385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c349300cda318a4c9dad8aa3ced31e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 12
+  damage: 1
+  effect: {fileID: 2641580652524751194, guid: df9a7b424af2cb948a9d4e7053e1ff72, type: 3}
+--- !u!58 &7263232881412351599
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -121,20 +137,10 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.073048115, y: 0.005619049}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 0.26952076, y: 0.2695198}
-  m_EdgeRadius: 0
---- !u!50 &7888176368731931387
+  m_Radius: 0.18726149
+--- !u!50 &-6196592210693600072
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -154,8 +160,8 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 6
---- !u!114 &1686110692271357088
+  m_Constraints: 0
+--- !u!114 &7357321631729949944
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -164,9 +170,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7888176368731931385}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c349300cda318a4c9dad8aa3ced31e0, type: 3}
+  m_Script: {fileID: 11500000, guid: 543f1af3d3056b94a96226fafc67d039, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 9
-  damage: 1
-  effect: {fileID: 2641580652524751194, guid: df9a7b424af2cb948a9d4e7053e1ff72, type: 3}
+  timeLife: 2

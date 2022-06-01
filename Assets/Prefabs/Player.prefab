@@ -331,10 +331,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e58d3cb54a41044f80f09295bc6c183, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 2945278955673664379, guid: 5d776158f7cd1e74ab12e6d008b0ea22, type: 3}
+  bullet: {fileID: 7888176368731931385, guid: 5d776158f7cd1e74ab12e6d008b0ea22, type: 3}
   canonPlayer: {fileID: 6547007969958053358}
   speed: 7
   jumpImpulse: 15
-  firerate: 1
+  fireRate: 1
   life: 1
   damage: 1

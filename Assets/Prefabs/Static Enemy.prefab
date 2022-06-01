@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4432623839348104125}
   - component: {fileID: 4432623839348104130}
-  - component: {fileID: 4432623839348104124}
   - component: {fileID: 4432623839348104127}
   - component: {fileID: 4432623839348104126}
-  m_Layer: 7
+  - component: {fileID: 4432623839348104124}
+  m_Layer: 0
   m_Name: Static Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -88,23 +88,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4432623839348104124
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4432623839348104131}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3cea76a8903c0c747a1a32f084bab1be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  life: 5
-  damage: 1
-  bullet: {fileID: 8223733802345651256, guid: 6f27f012d98680848a3d4876bb4b6230, type: 3}
-  canonEnemy: {fileID: 4432623839930317359}
-  coolDownFire: 2
 --- !u!60 &4432623839348104127
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -161,6 +144,24 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &4432623839348104124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4432623839348104131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cea76a8903c0c747a1a32f084bab1be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  life: 5
+  damage: 1
+  bullet: {fileID: 8223733802345651256, guid: 6f27f012d98680848a3d4876bb4b6230, type: 3}
+  canonEnemy: {fileID: 4432623839930317359}
+  trash: {fileID: 8613912247555442347, guid: 5f3a3f62463ea7f4783fc37116157e44, type: 3}
+  coolDownFire: 2
 --- !u!1 &4432623839930317356
 GameObject:
   m_ObjectHideFlags: 0
@@ -170,7 +171,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4432623839930317359}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: CanonEnemy
   m_TagString: Untagged
   m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
