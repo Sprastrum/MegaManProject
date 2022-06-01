@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 4432623839348104124}
   - component: {fileID: 4432623839348104127}
   - component: {fileID: 4432623839348104126}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Static Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -115,7 +115,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -170,7 +170,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4432623839930317359}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CanonEnemy
   m_TagString: Untagged
   m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
